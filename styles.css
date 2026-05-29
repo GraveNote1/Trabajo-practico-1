@@ -101,3 +101,16 @@ input[type="checkbox"] {
     margin-left: 300px;
 }
 
+#barCharts{
+    display: flex;
+    flex-direction: column;
+    
+}
+#barCharts .letter{
+    flex-direction: row;
+    list-style: none;
+    align-content: start;
+}
+.bar{
+    height: 3px;
+}
