@@ -34,6 +34,7 @@ header img{
     width: 50px;
 }
 header div button {
+    
     padding: 10px;
     background-color: #111111fa;
     border-radius: 50%;
@@ -46,13 +47,20 @@ main{
     
     flex-direction: row;
     align-content: center;
-    height: 50%;
-    width: 60%;
+    height: 60%;
+    width:  58%;
 }
 #area_texto{
     min-width: 400px;
-    min-height: 100px;
+    min-height: 133px;
+    resize: none;
+    background-color: #2a2a2a;
+    color: whitesmoke;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
 }
+
 main #scores{
     display: flex;
     flex-direction: row;
@@ -61,22 +69,29 @@ main #scores{
     padding: 20px;
     color: black;
 }
-main #scores .number{
 
-}
 main .background-1{
-    background-image: url(./assets/bg1.jpg);
-    padding: 20px;
+    background-color: rgb(143, 70, 143);
+    
     border-radius: 12px;
+}
+main .background{
+    padding: 20px 60px 10px 10px ;
+}
+main .background .number{
+    text-align: start;
+    font-size: 34px;
+    padding-bottom: 2px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 main .background-2{
     background-color: orange;
-    padding: 20px;
+    
+    
     border-radius: 12px;
 }
 main .background-3{
-    background-image: url(./assets/bg3.jpg);
-    padding: 20px;
+    background-color: orangered;
     border-radius: 12px;
 }
 main h2{
@@ -88,29 +103,85 @@ main h2{
     gap: 6px;
     font-weight: 400;
 }
-input[type="checkbox"] {
-    background-color: black;
-    
-}
 .checkboxes label{
+    display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap:4px;
 }
 .checkboxes p{
-    margin-left: 300px;
+    margin-left: 250px;
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border: 1px solid #555;
+    border-radius: 3px;
+    cursor: pointer;
+    vertical-align: middle;
 }
 
+input[type="checkbox"]:checked {
+    background-color: black;
+    border-color: #888;
+    /* Checkmark con SVG */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8l4 4 6-6' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-size: contain;
+}
 #barCharts{
     display: flex;
     flex-direction: column;
+    width: 100%;
     
 }
-#barCharts .letter{
+#barCharts .letter {
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    
     list-style: none;
-    align-content: start;
+    margin-bottom: 8px;
 }
-.bar{
-    height: 3px;
+
+.letters {
+    width: 16px;
+    text-align: left;
+}
+
+.bar {
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgb(180, 100, 220);
+    width: 50%;
+}
+.bar-track {
+    flex: 1;
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    height: 8px;
+}
+.value {
+    margin-left: auto;   
+    font-size: 14px;
+    color: #aaa;
+    white-space: nowrap;
+}
+section button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 16px;
+    display: flex;
+}
+
+section button:hover {
+    border-color: #888;
 }
